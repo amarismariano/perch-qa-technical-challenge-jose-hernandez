@@ -1,0 +1,55 @@
+{
+  "orders": {
+    "emptyOrders": [],
+    "singleOrder": [
+      {
+        "orderNumber": "ORD-001",
+        "date": "2024-01-15T10:30:00Z",
+        "total": 79.99,
+        "items": [
+          {
+            "id": 1,
+            "name": "Classic White Sneakers",
+            "price": 79.99,
+            "quantity": 1,
+            "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+          }
+        ]
+      }
+    ],
+    "largeOrder": [
+      {
+        "orderNumber": "ORD-004",
+        "date": "2024-01-25T16:20:00Z",
+        "total": 429.97,
+        "items": [
+          {
+            "id": 1,
+            "name": "Classic White Sneakers",
+            "price": 79.99,
+            "quantity": 1,
+            "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+          },
+          {
+            "id": 2,
+            "name": "Premium Leather Watch",
+            "price": 149.99,
+            "quantity": 1,
+            "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d"
+          },
+          {
+            "id": 3,
+            "name": "Wireless Headphones",
+            "price": 199.99,
+            "quantity": 1,
+            "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+          }
+        ]
+      }
+    ]
+  },
+  "orderValidation": {
+    "requiredFields": ["orderNumber", "date", "total", "items"],
+    "itemRequiredFields": ["id", "name", "price", "quantity", "image"]
+  }
+}

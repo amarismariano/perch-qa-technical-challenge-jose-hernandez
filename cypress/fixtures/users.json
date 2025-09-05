@@ -1,0 +1,43 @@
+{
+  "testUsers": [
+    {
+      "id": 1,
+      "name": "Test User",
+      "email": "test@example.com",
+      "address": {
+        "street": "123 Test Street",
+        "city": "Test City",
+        "postalCode": "12345",
+        "phone": "555-0123"
+      },
+      "payment": {
+        "cardNumber": "4111111111111111",
+        "expiryDate": "12/25",
+        "cardName": "Test User",
+        "cvv": "123"
+      }
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "address": {
+        "street": "456 Main St",
+        "city": "New York",
+        "postalCode": "10001",
+        "phone": "555-0456"
+      },
+      "payment": {
+        "cardNumber": "5555555555554444",
+        "expiryDate": "06/26",
+        "cardName": "John Doe",
+        "cvv": "456"
+      }
+    }
+  ],
+  "invalidPaymentData": {
+    "invalidCardNumbers": ["1234567890123456", "0000000000000000", "1234"],
+    "invalidExpiryDates": ["13/25", "12/20", "00/25"],
+    "invalidCVVs": ["12", "1234", "abc"]
+  }
+}

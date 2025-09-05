@@ -1,0 +1,27 @@
+{
+  "homepage": {
+    "title": "Product Catalog",
+    "searchPlaceholder": "Search products...",
+    "sortButtonText": {
+      "ascending": "Sort by Price ↑",
+      "descending": "Sort by Price ↓"
+    },
+    "navigationButtons": {
+      "profile": "Profile",
+      "cart": "Cart"
+    },
+    "noResultsMessage": "No products found matching your search."
+  },
+  "expectedProductCount": 3,
+  "timeouts": {
+    "default": 10000,
+    "short": 5000,
+    "long": 30000
+  },
+  "urls": {
+    "homepage": "/",
+    "profile": "/profile",
+    "cart": "/cart",
+    "product": "/product"
+  }
+}

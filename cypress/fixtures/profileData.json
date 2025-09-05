@@ -1,0 +1,48 @@
+{
+  "profiles": {
+    "defaultUser": {
+      "name": "John Doe",
+      "email": "john.doe@example.com"
+    },
+    "testUser": {
+      "name": "Test User",
+      "email": "test@example.com"
+    },
+    "newUser": {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com"
+    },
+    "invalidProfiles": {
+      "shortName": {
+        "name": "Jo",
+        "email": "jo@example.com"
+      },
+      "invalidName": {
+        "name": "John123",
+        "email": "john@example.com"
+      },
+      "invalidEmail": {
+        "name": "John Doe",
+        "email": "invalid-email"
+      },
+      "emptyName": {
+        "name": "",
+        "email": "john@example.com"
+      },
+      "emptyEmail": {
+        "name": "John Doe",
+        "email": ""
+      }
+    }
+  },
+  "validationMessages": {
+    "nameError": "Name must be at least 3 characters and contain only letters",
+    "emailError": "Please enter a valid email address"
+  },
+  "testScenarios": {
+    "validNames": ["John Doe", "Jane Smith", "Alice Johnson", "Bob Wilson"],
+    "invalidNames": ["Jo", "John123", "123John", "John@Doe"],
+    "validEmails": ["john@example.com", "jane.smith@test.org", "user+tag@domain.co.uk"],
+    "invalidEmails": ["invalid-email", "@example.com", "john@", "john.example.com"]
+  }
+}

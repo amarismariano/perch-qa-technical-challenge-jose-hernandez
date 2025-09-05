@@ -1,0 +1,93 @@
+{
+  "cartScenarios": {
+    "emptyCart": [],
+    "singleItem": [
+      {
+        "id": 1,
+        "name": "Classic White Sneakers",
+        "price": 79.99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+      }
+    ],
+    "multipleItems": [
+      {
+        "id": 1,
+        "name": "Classic White Sneakers",
+        "price": 79.99,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+      },
+      {
+        "id": 2,
+        "name": "Premium Leather Watch",
+        "price": 149.99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d"
+      }
+    ],
+    "allItems": [
+      {
+        "id": 1,
+        "name": "Classic White Sneakers",
+        "price": 79.99,
+        "quantity": 3,
+        "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+      },
+      {
+        "id": 2,
+        "name": "Premium Leather Watch",
+        "price": 149.99,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d"
+      },
+      {
+        "id": 3,
+        "name": "Wireless Headphones",
+        "price": 199.99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+      }
+    ],
+    "highQuantity": [
+      {
+        "id": 1,
+        "name": "Classic White Sneakers",
+        "price": 79.99,
+        "quantity": 5,
+        "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+      }
+    ]
+  },
+  "expectedCalculations": {
+    "singleItem": {
+      "subtotal": 79.99,
+      "description": "1 item × $79.99 = $79.99"
+    },
+    "multipleItems": {
+      "subtotal": 309.97,
+      "description": "(2 × $79.99) + (1 × $149.99) = $159.98 + $149.99 = $309.97"
+    },
+    "allItems": {
+      "subtotal": 729.95,
+      "description": "(3 × $79.99) + (2 × $149.99) + (1 × $199.99) = $239.97 + $299.98 + $199.99 = $729.95"
+    },
+    "highQuantity": {
+      "subtotal": 399.95,
+      "description": "5 × $79.99 = $399.95"
+    }
+  },
+  "quantityOptions": [0, 1, 2, 3, 4, 5],
+  "testScenarios": {
+    "quantityChanges": [
+      { "productId": 1, "fromQuantity": 1, "toQuantity": 3, "expectedSubtotal": 239.97 },
+      { "productId": 1, "fromQuantity": 3, "toQuantity": 0, "expectedSubtotal": 0 },
+      { "productId": 2, "fromQuantity": 1, "toQuantity": 2, "expectedSubtotal": 299.98 }
+    ],
+    "itemRemovals": [
+      { "productId": 1, "remainingItems": 2, "expectedSubtotal": 349.98 },
+      { "productId": 2, "remainingItems": 1, "expectedSubtotal": 199.99 }
+    ]
+  }
+}
+
